@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Jingshuo Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --link: #2563eb;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --bg-subtle: #f9fafb;
+      --accent: #2563eb;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15.5px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px 28px 72px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 44px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      background: var(--bg-subtle);
+      text-decoration: none;
+    }
+
+    nav a.active {
+      color: var(--text);
+      background: var(--bg-subtle);
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 0 0 8px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .page-subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0 0 40px;
+    }
+
+    h2 {
+      font-size: 13px;
+      margin: 44px 0 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 5px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: #374151;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+      margin-right: 4px;
+    }
+
+    .tag-collab {
+      color: #92400e;
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .project {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      transition: border-color 0.15s;
+    }
+
+    .project:hover {
+      border-color: #d1d5db;
+    }
+
+    .project p {
+      margin-bottom: 10px;
+      font-size: 14.5px;
+    }
+
+    .project p:last-child {
+      margin-bottom: 0;
+    }
+
+    .collaborators {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .collaborators-label {
+      font-weight: 600;
+      color: #4b5563;
+      margin-right: 6px;
+    }
+
+    .collab-inst {
+      color: #9ca3af;
+      font-size: 12px;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 24px 18px 52px;
+      }
+
+      nav {
+        padding-bottom: 32px;
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <nav>
+      <a href="index.html">home</a>
+      <a href="projects.html" class="active">projects</a>
+      <a href="index.html#Updates">updates</a>
+      <a href="index.html#contact">contact</a>
+    </nav>
+
+    <h1>Projects</h1>
+    <p class="page-subtitle">Research and engineering work in robotics, control, and biomechanics.</p>
+
+    <h2>ongoing</h2>
+
+    <div class="project">
+      <h3>Spirit Walking — Quadruped Loco-Manipulation with MPPI</h3>
+      <div class="tag">Quadruped Locomotion / Optimal Control</div>
+      <p>
+        Developing a hierarchical loco-manipulation framework for the Spirit 40 quadruped robot
+        that combines reinforcement learning-based locomotion control with Model Predictive
+        Path Integral (MPPI) planning for autonomous box-pushing tasks.
+      </p>
+      <p>
+        The system integrates a PPO-trained low-level locomotion policy with a high-level MPPI
+        planner that optimizes body velocity commands in parallel GPU-based simulation using
+        Genesis. The framework also includes a body-fixed single-leg manipulation mode that
+        directly optimizes swing-leg joint trajectories for contact-rich interaction tasks.
+      </p>
+      <p>
+        Built with PyTorch, Genesis simulator, and rsl-rl, with support for large-scale parallel
+        trajectory rollouts and learned whole-body control.
+      </p>
+      <div class="collaborators">
+        <span class="collaborators-label">Collaborators &amp; Special Thanks —</span>
+        —
+      </div>
+    </div>
+
+    <h2>finished</h2>
+
+    <div class="project">
+      <h3>TrussSpirit — Quadruped Locomotion Controller for Structured Environments</h3>
+      <!-- Part of the NASA Truss Project, a collaboration between UPenn and USC -->
+      <div class="tag">Quadruped Locomotion / Control Systems</div>
+      <div class="tag tag-collab">NASA TRUSS Project</div>
+      <p>
+        Developed a custom locomotion controller for the Spirit 40 quadruped robot as part of a
+        joint research effort between the University of Pennsylvania and the University of Southern
+        California, targeting stable locomotion on space truss structures.
+      </p>
+      <p>
+        Extended the Ghost Robotics Spirit SDK with <code>TrussSpirit</code>, a custom robot class
+        implementing robust state estimation for non-flat, structured environments. A
+        pair-frame-based world frame estimator computes the ground contact plane from all six
+        combinations of stance foot pairs, providing yaw-robust body pose tracking even during
+        single-leg swing phases. CoM position and velocity are estimated via weighted foot
+        averaging or a convex-hull centroid approach.
+      </p>
+      <p>
+        The stance controller supports external body force feedforward for payload-aware
+        balancing, with force estimates derived from per-leg Jacobian-transpose inversion of
+        joint torque readings. High-level velocity and force commands are streamed in real time
+        over MAVLink between the onboard Jetson TX2 and the Spirit mainboard. Implemented in
+        C++ with Eigen, deployed and tested on the Spirit 40 hardware at the LASSIE Lab at Penn.
+      </p>
+      <div class="collaborators">
+        <span class="collaborators-label">Collaborators &amp; Special Thanks —</span>
+        Ethan Fulther <span class="collab-inst">(MIT)</span>,
+        Eric Sigg <span class="collab-inst">(UPenn)</span>,
+        Shivangi Misra <span class="collab-inst">(UPenn)</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Coupled Jet Coordination and Physical Arrangement in Salp-Inspired Multi-Robot Swimming</h3>
+      <div class="tag">Bio-inspired Robotics / Fluid Dynamics</div>
+      <p>Published in <i>Bioinspiration &amp; Biomimetics</i>, 2025.</p>
+      <p>
+        Contributed to experimental flow characterization and analysis for a salp-inspired
+        multi-robot swimming system developed at Sung Robotics Lab. My work
+        focused on particle image velocimetry (PIV) experiments, including flow measurement,
+        vortex analysis, and data processing to support the free-swimming performance studies
+        of coordinated underwater robotic systems.
+      </p>
+      <p>
+        The project investigated how jet coordination and physical arrangement influence
+        propulsion efficiency and locomotion performance in modular soft underwater robots
+        inspired by biological salps.
+      </p>
+      <p><a href="https://iopscience.iop.org/article/10.1088/1748-3190/ae1396/meta">Paper &rarr;</a></p>
+      <div class="collaborators">
+        <span class="collaborators-label">Collaborators &amp; Special Thanks —</span>
+        Annie Yang <span class="collab-inst">(UPenn)</span>,
+        Yipeng Zhang <span class="collab-inst">(UPenn)</span>,
+        Neel Mulay <span class="collab-inst">(UPenn)</span>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Jingshuo Li.
+    </footer>
+  </main>
+</body>
+</html>
